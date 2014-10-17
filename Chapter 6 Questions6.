@@ -24,5 +24,6 @@ public boolean badIndentation(int maxLines)
 }
 
 11)
+The title bar on the Applet window is empty, so it doesn't display "GUI Demo" on the top of the box. 
 
 12)
