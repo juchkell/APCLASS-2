@@ -7,8 +7,21 @@ Because the if statement only has one condition, the braces are a matter of styl
 is required by Java syntax because it signals the end of that statement. 
 
 8)
+The applet compiles with no errors because the extra semicolon does not cause a syntax error in the code. The message is not moving
+across the screen because the semicolon effectively terminates the if statement by not including its result if the condition holds
+true. This means that the horizontal position of the banner won't be adjusted, so the banner won't move across the screen. 
 
 9)
+public boolean badIndentation(int maxLines)
+{
+  int lineCount = 3;
+  while (lineCount < maxLines)
+  {
+    System.out.println(lineCount);
+    lineCount++;
+  }
+  return true;
+}
 
 11)
 
