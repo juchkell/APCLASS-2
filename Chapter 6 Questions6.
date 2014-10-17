@@ -24,6 +24,15 @@ public boolean badIndentation(int maxLines)
 }
 
 11)
-The title bar on the Applet window is empty, so it doesn't display "GUI Demo" on the top of the box. 
+The title bar on the Applet window is empty, so it doesn't display "GUI Demo" on the top of the box. The absence of the title
+can be explained by the fact that the constructor is not called upon because it is commented out. 
 
 12)
+line 21 - missing "t" in the "set" of seBackground
+Correct: c.setBackground(Color.WHITE);
+
+line 26 - missing "()" after the second Morning in the declaration of the morning variable 
+Correct: Morning morning = new Morning();
+
+line 17 - missing quotation mark after roost.wav
+Correct: rooster = new EasySound("roost.wav");
