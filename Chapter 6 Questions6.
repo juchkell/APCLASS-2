@@ -1,0 +1,15 @@
+6)
+If the name of the main method in the MovingDisk class is mistyped with a capital M, the interpreter will signal an exception:
+Exception in thread "main" java.lang.NoSuchMethodError: main
+
+7)
+Because the if statement only has one condition, the braces are a matter of style and readibility? In contrast, the semi-colon 
+is required by Java syntax because it signals the end of that statement. 
+
+8)
+
+9)
+
+11)
+
+12)
