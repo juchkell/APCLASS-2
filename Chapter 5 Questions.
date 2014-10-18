@@ -24,8 +24,16 @@ public boolean badIndentation(int maxLines)
 }
 
 11)
+a) 
 If we comment out the statement "super("GUI Demo");," the title bar on the Applet window becomes empty, so it doesn't display 
-"GUI Demo" on the top of the box. The absence of the title can be explained by the fact that the constructor is not called upon because it is commented out. 
+"GUI Demo" on the top of the box. The absence of the title can be explained by the fact that the constructor is not called upon because it is commented out.
+The program still runs.
+
+(b) If we modify the constructors, the program compiles, althouth the window is empty.
+This can be explained by the fact that the HelloGui() method is no longer treated as a constructor, so the default constructor 
+is used instead. 
+The String that is supposed to appear takes on a null value, meaning that the window is empty. 
+
 
 12)
 line 21 - missing "t" in the "set" of seBackground
@@ -37,39 +45,36 @@ Correct: Morning morning = new Morning();
 line 17 - missing quotation mark after roost.wav
 Correct: rooster = new EasySound("roost.wav");
 
+12 b) 
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-
-12 b) 
 
 public class Morning extends JFrame
 implements ActionListener
 {
   private EasySound rooster;
-  private int time;
+  private int time; 
   
   public Morning()
   {
     super("Morning");
     rooster = new EasySound("roost.wav");
     
-
-
     Container c = getContentPane();
-    c.setBackground(Color.WHITE);
+    c.setBackground(Color.WHITE); //background is set to white
     
     time = 0;
-    Timer clock = new Timer(5000, this); 
+    Timer clock = new Timer(5000, this); //rooster.wav repeats every five seconds
     clock.start();
   }
-  public void actionPerformed(ActionEvent e)
+  public void actionPerformed(ActionEvent e) 
   {
     time++;
     rooster.play();
     repaint();
   }
-
 
   public static void main(String[] args)
   {
@@ -98,8 +103,8 @@ implements ActionListener
   public Morning()
   {
     super("Morning");
-    rooster = new EasySound("roost.wav");
-    cow = new EasySound("moo.wav");
+    rooster = new EasySound("roost.wav"); // declares the variable rooster and associates roost.wav with it
+    cow = new EasySound("moo.wav"); //declares the variable mow and associates moo.wav with it
 
 
     Container c = getContentPane();
@@ -114,15 +119,15 @@ implements ActionListener
     time++;
     if(time%2==0)
     {
-      rooster.play();
-      Container d = getContentPane();
-      d.setBackground(Color.WHITE);
+      rooster.play(); //sets roost.wav to play if the time  is even
+      Container d = getContentPane(); 
+      d.setBackground(Color.WHITE); //changes the background to black every five seconds
     }
     else 
     {
-      cow.play();
-      Container f = getContentPane();
-      f.setBackground(Color.BLACK);
+      cow.play(); //sets moo.wav to play if the time is odd
+      Container f = getContentPane(); //alternates the program between
+      f.setBackground(Color.BLACK); //changes the background to white every five seconds
     }
     
     
