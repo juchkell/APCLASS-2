@@ -3,7 +3,7 @@ If the name of the main method in the MovingDisk class is mistyped with a capita
 Exception in thread "main" java.lang.NoSuchMethodError: main
 
 7)
-Because the if statement only has one condition, the braces are a matter of style and readibility? In contrast, the semi-colon 
+Because the if statement only has one condition, the braces are a matter of style and readibility. In contrast, the semi-colon 
 is required by Java syntax because it signals the end of that statement. 
 
 8)
@@ -35,7 +35,7 @@ is used instead.
 The String that is supposed to appear takes on a null value, meaning that the window is empty. 
 
 
-12)
+12) a)
 line 21 - missing "t" in the "set" of seBackground
 Correct: c.setBackground(Color.WHITE);
 
@@ -106,7 +106,6 @@ implements ActionListener
     rooster = new EasySound("roost.wav"); // declares the variable rooster and associates roost.wav with it
     cow = new EasySound("moo.wav"); //declares the variable mow and associates moo.wav with it
 
-
     Container c = getContentPane();
     c.setBackground(Color.WHITE);
     
@@ -130,9 +129,7 @@ implements ActionListener
       f.setBackground(Color.BLACK); //changes the background to white every five seconds
     }
     
-    
   }
-
 
   public static void main(String[] args)
   {
