@@ -24,8 +24,8 @@ public boolean badIndentation(int maxLines)
 }
 
 11)
-The title bar on the Applet window is empty, so it doesn't display "GUI Demo" on the top of the box. The absence of the title
-can be explained by the fact that the constructor is not called upon because it is commented out. 
+If we comment out the statement "super("GUI Demo");," the title bar on the Applet window becomes empty, so it doesn't display 
+"GUI Demo" on the top of the box. The absence of the title can be explained by the fact that the constructor is not called upon because it is commented out. 
 
 12)
 line 21 - missing "t" in the "set" of seBackground
