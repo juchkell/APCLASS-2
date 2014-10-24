@@ -89,8 +89,8 @@ public class Bmi extends JFrame
   // over squared height in meters.
   private double calculateBmi(int lbs, int inches)
   {
-  double meters = inches*0.0254;
-  double kilograms = lbs*0.454;
+    double meters = inches*0.0254;
+    double kilograms = lbs*0.454;
   
   return kilograms/(meters*meters);
   }
