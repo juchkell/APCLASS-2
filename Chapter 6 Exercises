@@ -18,7 +18,10 @@ b) 98/5 = 19.6, but since it's type int it's truncated to 19
 type double outputs 19.0
 result: 19.0
 
+8. count += (((total/pages) - 5) * words - 1);
+minimal parentheses: 
+count += (total/pages -5) * words - 1;
 
-
+9. 
 
 
