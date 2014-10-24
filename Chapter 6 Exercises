@@ -92,7 +92,7 @@ public class Bmi extends JFrame
     double meters = inches*0.0254;
     double kilograms = lbs*0.454;
   
-  return kilograms/(meters*meters);
+    return kilograms/(meters*meters);
   }
 
   public static void main(String[] args)
