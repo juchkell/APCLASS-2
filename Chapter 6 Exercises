@@ -1,0 +1,24 @@
+Exercises 6, 7, 8, 9, 12, and 16
+
+6. 
+a. System.out.print(5/10); --> prints 0 because of integer division
+b. System.out.print(1/2 * 10); --> prints 0
+c. System.out.print(1.0 / 2 * 10); 1.0/2 equals 0.5, which is then multiplied by 10, so it prints 5.0
+d. System.out.print(1 / 2.0 * 10); same as c, prints 5.0
+e. System.out.print(13 % 5); prints 3
+
+7. 
+a)
+double rate = 1.058;
+int balance0 = 100, balance = (int)(balance0 * rate);
+
+balance is type int, so it truncates the result to the number below, so (int)(1.058 * 100) equals 105.
+
+b) 98/5 = 19.6, but since it's type int it's truncated to 19
+type double outputs 19.0
+result: 19.0
+
+
+
+
+
