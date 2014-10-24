@@ -13,15 +13,100 @@ double rate = 1.058;
 int balance0 = 100, balance = (int)(balance0 * rate);
 
 balance is type int, so it truncates the result to the number below, so (int)(1.058 * 100) equals 105.
+The value of balance is 105. 
 
 b) 98/5 = 19.6, but since it's type int it's truncated to 19
 type double outputs 19.0
-result: 19.0
+The value of gasMileage is thus 19.0. 
 
 8. count += (((total/pages) - 5) * words - 1);
 minimal parentheses: 
 count += (total/pages -5) * words - 1;
 
-9. 
+9. Fixed statement:
+final double g = 16.0;
+double t = 35.5;
+System.out.print("The travel distance is ");
+System.out.println(1.0/2*(g*t*t));
+
+I changed 1 to 1.0 in line 4 so that (1/2) would be a double and not an integer, so it would be 0.5 instead of 0.0. 
+
+12. 
+Since temp is an int, there is a syntax error on lines:
+temp = a;
+b = temp;
+because a,b and temp are different data types. To fix the code, declare the variable temp as a double, as follows:
+double a, b, temp;
+
+16. Missing code for calculateBmi method:
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.text.DecimalFormat;
+
+public class Bmi extends JFrame
+  implements ActionListener
+{
+  JTextField inputLbs, inputInches, displayBmi;
+
+  public Bmi()
+  {
+    super("BMI Calculator");
+    JLabel labelLbs = new JLabel("Weight (lbs):", SwingConstants.RIGHT);
+    inputLbs = new JTextField(5);
+    JLabel labelInches = new JLabel("Height (inches):", SwingConstants.RIGHT);
+    inputInches = new JTextField(5);
+    JLabel labelBmi = new JLabel("BMI = ", SwingConstants.RIGHT);
+    displayBmi = new JTextField(5);
+    displayBmi.setEditable(false);
+    JButton go = new JButton("Compute");
+    go.addActionListener(this);
+
+    Container c = getContentPane();
+    c.setBackground(Color.white);
+    JPanel p = new JPanel();
+    p.setLayout(new GridLayout(3, 2, 5, 5));
+    p.add(labelLbs);
+    p.add(inputLbs);
+    p.add(labelInches);
+    p.add(inputInches);
+    p.add(labelBmi);
+    p.add(displayBmi);
+    c.add(p, BorderLayout.CENTER);
+    c.add(go, BorderLayout.SOUTH);
+  }
+
+  public void actionPerformed(ActionEvent e)
+  {
+    int lbs = Integer.parseInt(inputLbs.getText());
+    int inches = Integer.parseInt(inputInches.getText());
+    double bmi = calculateBmi(lbs, inches);
+    DecimalFormat df = new DecimalFormat("00.0");
+    displayBmi.setText(df.format(bmi));
+  }
+
+  // Returns BMI equal to weight in kilograms divided
+  // over squared height in meters.
+  private double calculateBmi(int lbs, int inches)
+  {
+  double meters = inches*0.0254;
+  double kilograms = lbs*0.454;
+  
+  return kilograms/(meters*meters);
+  }
+
+  public static void main(String[] args)
+  {
+    Bmi w = new Bmi();
+    w.setBounds(300, 300, 300, 160);
+    w.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    w.setVisible(true);
+  }
+}
+
+
+  
+
+
 
 
