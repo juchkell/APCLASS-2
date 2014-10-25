@@ -1,0 +1,25 @@
+13)
+public class NewInteger {
+	public static String sumDouble(int n) {
+	
+	int unit1 = n % 10;
+	int unit2 = (n / 10) % 10;
+	int body = n - (n % 100); 
+	int total = body + unit1 * 10 + unit2;
+			
+	String strn = "" + n;
+	if (strn.equals(0)) {
+	  return "00";}
+	else if (strn.length() == 1) {
+	  return total + "";}
+	else if (strn.length() >= 2) {
+      return total + "";}
+	return strn;
+	}
+
+	public static void main(String [] args){
+		System.out.println(sumDouble(124));
+	}
+}
+
+14) 
