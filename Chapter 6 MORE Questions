@@ -23,3 +23,15 @@ public class NewInteger {
 }
 
 14) 
+public class FindDay {
+	
+  public static int Find(int day){
+    int dayOfWeek1 = 0;
+    int dayOfWeek = ((dayOfWeek1 + (day-1)) % 7 ); 
+    return dayOfWeek;
+}
+
+  public static void main(String args[]){
+    System.out.println(Find(13));}
+
+}
