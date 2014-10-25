@@ -39,8 +39,5 @@ public class FindDay {
 15)
   int tilltime = (depHour - curHour) * 60 + (depMin - curMin);
   
-  System.out.println(tillHour / 60 + " hours and " + tillMin % 60 + " minutes.")
-  
-  System.out.println
-                                  ;
-System.out.println(        + "hours and " +               + "minutes.");
+  System.out.println(tillHour / 60 + " hours and " + tillMin % 60 + "minutes.")
+ 
