@@ -24,7 +24,27 @@ class HalloweenPanel extends JPanel {
        g2.setPaint(Color.black);
        g.drawOval(10,10,50,100);
        g.fillOval(100,20,50,100);
+       
+       Area mouth = new Area(new Ellipse2D.Double(w/16, h/16, w*7/8, h*7/8));
+       g2.draw(mouth);
     }
 }
     
 }
+		   /* }
+		    Graphics() g = new Graphics;
+		    
+	        ActorWorld world = new ActorWorld();
+	        world.add(new Bug());
+	        world.add(new Rock());
+	        world.show(); 
+	    } */
+
+
+		 /*
+
+fillOval(posx, posy, width, height);
+drawString(string, x, y);
+fillPolygon(xCoords[], yCoords[], totalNumberOfPoints);
+setColor(color);
+setXORmode(color); //alternates with the set color of the graphic */
