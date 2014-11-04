@@ -98,8 +98,7 @@ public static void main(String[] args)
 		
 16)
 
-16.
-(a)
+a.
 
 
 public static double getOrderTotal(int bp, int nb)
@@ -163,11 +162,11 @@ public class TestPrepOrder {
 
 	public static void main(String[] args) {
 		Scanner orderInput = new Scanner(System.in);
-		System.out.println("Enter the number of \"Be Prepared\" you would like to purchase: ");
+		System.out.println("Enter the number of \"Be Prepared\" that you want to purchase: ");
 		int bePrepared = orderInput.nextInt();
-		System.out.println("Enter the number of \"Next Best\" you would like to purchase: ");
+		System.out.println("Enter the number of \"Next Best\" that you want to purchase: ");
 		int nextBest = orderInput.nextInt();
-		System.out.println("The total cost is $" + getOrderTotal(bePrepared,nextBest) + ".");
+		System.out.println("The total cost is " + getOrderTotal(bePrepared,nextBest) + "$.");
 
 
 	}
