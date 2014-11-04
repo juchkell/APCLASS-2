@@ -85,7 +85,7 @@ public static void main(String[] args)
 
 
 14) 
-if avg < 60{
+	if avg < 60{
 		grade = 'F';}
 	else if avg < 70 {
 		grade = 'D';}
@@ -95,3 +95,81 @@ if avg < 60{
 		grade = 'B';}
 	else {
 		grade = 'A';}
+		
+16)
+
+16.
+(a)
+
+
+public static double getOrderTotal(int bp, int nb)
+{
+  double totalPrice = 0.0;
+		if (bp + nb >= 12)
+		{
+			totalPrice = 14.0 * (bp + nb);
+		}
+		
+		else if (bp + nb >= 3)
+		{
+			totalPrice = 15.95 * (bp + nb);
+		}
+		
+		else if (bp == 1 && nb == 1)
+		{
+			totalPrice = 37.95;
+		}
+		
+		else
+		{
+			totalPrice = 18.95 * bp + 21.95 * nb;
+		}
+		
+		return totalPrice;
+}
+
+
+(b)
+import java.util.Scanner;
+
+
+public class TestPrepOrder {
+	
+	public static double getOrderTotal(int bp, int nb){
+		double totalPrice = 0.0;
+		if (bp + nb >= 12)
+		{
+			totalPrice = 14.0 * (bp + nb);
+		}
+		
+		else if (bp + nb >= 3)
+		{
+			totalPrice = 15.95 * (bp + nb);
+		}
+		
+		else if (bp == 1 && nb == 1)
+		{
+			totalPrice = 37.95;
+		}
+		
+		else
+		{
+			totalPrice = 18.95 * bp + 21.95 * nb;
+		}
+		
+		return totalPrice;
+	}
+
+
+	public static void main(String[] args) {
+		Scanner orderInput = new Scanner(System.in);
+		System.out.println("Enter the number of \"Be Prepared\" you would like to purchase: ");
+		int bePrepared = orderInput.nextInt();
+		System.out.println("Enter the number of \"Next Best\" you would like to purchase: ");
+		int nextBest = orderInput.nextInt();
+		System.out.println("The total cost is $" + getOrderTotal(bePrepared,nextBest) + ".");
+
+
+	}
+}
+
