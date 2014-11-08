@@ -1,0 +1,17 @@
+7. A) x && y || !a && !b
+
+B) if (x!=7 && x<=7))
+
+8. A)
+if ((x + 2 > a || x-2 < b) && y >= 0)
+
+B) if (a >= b && a >= c && a % 2 == 0)
+
+10.
+
+boolean Sequence = a*c == b*b;
+
+11. a)
+boolean inside = (x >= left && x <= right && y >= top && y <= bottom);
+
+b) boolena no = (ch[0] == 'N' || ch[0] == 'n') && (ch[1] == 'O' || ch[1] == 'o');
