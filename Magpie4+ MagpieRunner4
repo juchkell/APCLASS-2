@@ -1,3 +1,4 @@
+
 package magpie4;
 
 /**
@@ -55,7 +56,10 @@ public class Magpie4
 		{
 			response = transformIWantToStatement(statement);
 		}
-
+		else if (findKeyword(statement, "I want", 0) >= 0)
+		{
+			response = transformIWantStatement(statement);
+		}
 		else
 		{
 			// Look for a two word (you <something> me)
@@ -98,10 +102,10 @@ public class Magpie4
 		
 		
 	}
-	private String transformIWantStatement(String statement)
-	{
-		
-	//  Remove the final period, if there is one
+	
+		private String transformIWantStatement(String statement)
+		{
+			//  Remove the final period, if there is one
 			statement = statement.trim();
 			String lastChar = statement.substring(statement
 					.length() - 1);
@@ -110,9 +114,10 @@ public class Magpie4
 				statement = statement.substring(0, statement
 						.length() - 1);
 			}
-		int position2 = findKeyword (statement, "I want ", 0);
-		String restOfStatement2 = statement.substring(position2 + 6).trim();
-		return "Would you really be happy if you had " + restOfStatement2 + "?";
+			int psn = findKeyword (statement, "I want", 0);
+			String restOfStatement = statement.substring(psn + 6).trim();
+			return "Would you really be happy if you had " + restOfStatement + "?";
+
 	}
 	/**
 	 * Take a statement with "you <something> me" and transform it into 
@@ -254,6 +259,7 @@ public class Magpie4
 	}
 
 }
+
 
 package magpie4;
 
