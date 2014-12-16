@@ -1,24 +1,26 @@
-import java.util.*;
-	
+package eggcarton;
 
-	public class EggCartonRunner
-	{
-	    public static void main(String[] args)
-	    {
-	        
-	        Scanner sc = new Scanner(System.in);
-	        System.out.println("Enter the expiration date out of 365: ");
-	        int i = sc.nextInt();
-	       
-	        if (i > 0 && i <= 365)
-	        {
-	            EggCarton chickenRun = new EggCarton (i);
-	            System.out.println("Expiration date is " + chickenRun.expireCalc() + ".");
-	        }
-	        
-	        else
-	            System.out.println("Please enter your number again. It appears it is wrong.");
-	                
-	    }
-	}
+import java.util.*;
+
+
+public class EggCartonRunner
+{
+    public static void main(String[] args)
+    {
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the expiration date out of 365: ");
+        int i = sc.nextInt();
+       
+        if (i > 0 && i <= 365)
+        {
+            EggCarton chickenRun = new EggCarton (i);
+            System.out.println("The expiration date will fall two weeks later on day " + chickenRun.expireCalc() + ".");
+        }
+        
+        else
+            System.out.println("Please enter your number again. It appears it is wrong.");
+                
+    }
+}
 
