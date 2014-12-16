@@ -7,7 +7,7 @@ import java.util.*;
 	    {
 	        
 	        Scanner sc = new Scanner(System.in);
-	        System.out.println("Enter the number on the egg carton (out of 365): ");
+	        System.out.println("Enter the expiration date out of 365: ");
 	        int i = sc.nextInt();
 	       
 	        if (i > 0 && i <= 365)
@@ -17,7 +17,7 @@ import java.util.*;
 	        }
 	        
 	        else
-	            System.out.println("Wrong entry.");
+	            System.out.println("Please enter your number again. It appears it is wrong.");
 	                
 	    }
 	}
