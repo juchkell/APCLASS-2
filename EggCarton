@@ -1,0 +1,21 @@
+public class EggCarton
+	{
+	    private int cartonNum;
+	
+
+	    public EggCarton(int day)
+	    {
+	        cartonNum = day;
+	    }
+	    
+	    public int getCartonNum()
+	    {
+	        return cartonNum;
+	    }
+	    
+	    public int expireCalc()    
+	    {
+	        return cartonNum + 14;
+	    }
+	}
+
