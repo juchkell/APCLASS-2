@@ -1,21 +1,23 @@
+package eggcarton;
+
 public class EggCarton
 	{
-	    private int cartonNum;
+	    private int KartNum;
 	
 
 	    public EggCarton(int day)
 	    {
-	        cartonNum = day;
+	    	KartNum = day;
 	    }
 	    
 	    public int getCartonNum()
 	    {
-	        return cartonNum;
+	        return KartNum;
 	    }
 	    
 	    public int expireCalc()    
 	    {
-	        return cartonNum + 14;
+	        return KartNum + 14;
 	    }
 	}
 
